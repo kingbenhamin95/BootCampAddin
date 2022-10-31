@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootCampAddin", "BootCampAddin\BootCampAddin.csproj", "{BF4B12F7-7560-4EE1-8BCA-A306EC226FEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF4B12F7-7560-4EE1-8BCA-A306EC226FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4B12F7-7560-4EE1-8BCA-A306EC226FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4B12F7-7560-4EE1-8BCA-A306EC226FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4B12F7-7560-4EE1-8BCA-A306EC226FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79914829-9C23-4869-9852-3B9D55B6C32E}
+	EndGlobalSection
+EndGlobal

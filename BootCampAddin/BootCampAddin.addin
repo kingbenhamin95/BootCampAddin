@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command BootCampAddin</Text>
+    <Description>Some description for BootCampAddin</Description>
+    <Assembly>BootCampAddin.dll</Assembly>
+    <FullClassName>BootCampAddin.Command</FullClassName>
+    <ClientId>94a5ff58-762c-461b-9bfd-7de8105893d8</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application BootCampAddin</Name>
+    <Assembly>BootCampAddin.dll</Assembly>
+    <FullClassName>BootCampAddin.App</FullClassName>
+    <ClientId>d4e4a050-4643-4915-9296-22a1060b3538</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
