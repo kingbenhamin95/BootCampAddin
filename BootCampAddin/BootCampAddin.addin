@@ -9,6 +9,15 @@
     <VendorId>com.typepad.thebuildingcoder</VendorId>
     <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
   </AddIn>
+  <AddIn Type="Command">
+	<Text>Command01Challenge BootCampAddin</Text>
+	<Description>Some description for BootCampAddin</Description>
+	<Assembly>BootCampAddin.dll</Assembly>
+	<FullClassName>BootCampAddin.Command01Challenge</FullClassName>
+	<ClientId>162c3b41-fa2d-49b9-a626-ecdbbac43fbc</ClientId>
+	<VendorId>com.typepad.thebuildingcoder</VendorId>
+	<VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
   <AddIn Type="Application">
     <Name>Application BootCampAddin</Name>
     <Assembly>BootCampAddin.dll</Assembly>
