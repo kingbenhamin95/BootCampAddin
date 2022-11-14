@@ -26,4 +26,13 @@
     <VendorId>com.typepad.thebuildingcoder</VendorId>
     <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
   </AddIn>
+  <AddIn Type="Command">
+	<Text>CmdProjectSetup</Text>
+	<Description>Some description for BootCampAddin</Description>
+	<Assembly>BootCampAddin.dll</Assembly>
+	<FullClassName>BootCampAddin.CmdProjectSetup</FullClassName>
+	<ClientId>162c3b41-fa2d-49b9-a626-ecdbbac29fbc</ClientId>
+	<VendorId>com.typepad.thebuildingcoder</VendorId>
+	<VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
 </RevitAddIns>

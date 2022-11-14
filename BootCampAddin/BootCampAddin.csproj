@@ -49,10 +49,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Command02Challenge.cs" />
+    <Compile Include="CmdProjectSetup.cs" />
     <Compile Include="Command01Challenge.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
