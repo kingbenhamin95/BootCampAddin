@@ -29,15 +29,17 @@ namespace BootCampAddin
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
+            //Select File Drom File Dialog Box
             System.Windows.Forms.OpenFileDialog openDlg = new System.Windows.Forms.OpenFileDialog();
 
             openDlg.Title = "Select a file";
             openDlg.Filter = "csv (*.csv)|*csv|Excel Files (*.xlsx)|*xlsx|Text Files (*txt)|*.txt|All Files (*.*)|*.*";
-            openDlg.RestoreDirectory = true;
+            openDlg.RestoreDirectory = true; 
 
+            string path = openDlg.FileName.ToString();
+
+            //Test File Input
             System.Windows.Forms.DialogResult result = openDlg.ShowDialog();
-
-            string path = openDlg.FileName.ToString(); 
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
@@ -56,10 +58,10 @@ namespace BootCampAddin
                 Transaction t = new Transaction(doc);
                 t.Start("Import Excel Data");
 
+                //Create Level
                 foreach (string rowstring in file)
                 {
-
-                    //Create Level
+                                      
                     string[] cellString = rowstring.Split(',');
                     string levelName = cellString[0];
                     string levelNumber = cellString[1];                    
