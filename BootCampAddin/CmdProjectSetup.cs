@@ -39,36 +39,61 @@ namespace BootCampAddin
 
             string path = openDlg.FileName.ToString();
 
-
             
+
+
+
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
+                //Grab Title Block ID
+                FilteredElementCollector collector = new FilteredElementCollector(doc)
+                    .OfCategory(BuiltInCategory.OST_TitleBlocks);
+                ElementId tBlockId = collector.FirstElementId();
+
+
+                //Read Files
                 string[] fileArray = System.IO.File.ReadAllLines(path);
                 List<string> file = fileArray.ToList();
-                file.RemoveAt(0);
+                file.RemoveAt(0);                
 
-                //FilteredElementCollector collector = new FilteredElementCollector(doc)
-                //    .OfCategory(BuiltInCategory.OST_TitleBlocks);
-
-                // ElementId tBlockId = collector.FirstElementId();
+                //Start Transaction
                 Transaction t = new Transaction(doc);
                 t.Start("Import Excel Data");
 
                 foreach (string rowstring in file)
                 {
 
+                    //Create Level
                     string[] cellString = rowstring.Split(',');
                     string levelName = cellString[0];
-                    string levelNumber = cellString[1];
-
-                    
+                    string levelNumber = cellString[1];                    
 
                     Level newLevel = Level.Create(doc, double.Parse(levelNumber));
-                    newLevel.Name = levelName;
-
-
+                    newLevel.Name = levelName; 
                     
+                }
+
+                //Get Sheets               
+                string pathSheet = "C:\\Users\\ben\\Downloads\\RAB_Session_02_Challenge_Sheets.csv";
+
+                //Read Sheets
+                string[] sheetArray = System.IO.File.ReadAllLines(pathSheet);
+                List<string> file2 = sheetArray.ToList();
+                file2.RemoveAt(0);
+
+                //Create Sheets
+                foreach (string rowstring in file2)
+                {
+
+                    string[] cellString = rowstring.Split(',');
+                    string sheetNumber = cellString[0];
+                    string sheetName = cellString[1];
+
+                    ViewSheet newSheet = ViewSheet.Create(doc, tBlockId);
+                    newSheet.Name = sheetName;
+                    newSheet.SheetNumber = sheetNumber;
+
                 }
                 t.Commit();
                 t.Dispose();
@@ -77,14 +102,7 @@ namespace BootCampAddin
             else
             {
                 TaskDialog.Show("Failed", "Incorrect File Selection");
-            }
-
-
-
-            
-
-
-            
+            }           
 
             return Result.Succeeded;
         }
