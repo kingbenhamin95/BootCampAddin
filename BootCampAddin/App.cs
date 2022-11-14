@@ -14,14 +14,14 @@ namespace BootCampAddin
     {
         public Result OnStartup(UIControlledApplication a)
         {
-            TaskDialog.Show("Test", "Myaddin is starting up!");
+            
 
             return Result.Succeeded;
         }
 
         public Result OnShutdown(UIControlledApplication a)
         {
-            TaskDialog.Show("Test", "Myaddin is closing!");
+            
             return Result.Succeeded;
         }
     }

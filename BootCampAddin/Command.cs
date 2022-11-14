@@ -25,9 +25,7 @@ namespace BootCampAddin
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
-            TaskDialog.Show("Test", "This is my command add-in");
-
-
+            
             return Result.Succeeded;
         }
     }
