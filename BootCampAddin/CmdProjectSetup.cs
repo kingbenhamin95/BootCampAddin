@@ -37,12 +37,7 @@ namespace BootCampAddin
 
             System.Windows.Forms.DialogResult result = openDlg.ShowDialog();
 
-            string path = openDlg.FileName.ToString();
-
-            
-
-
-
+            string path = openDlg.FileName.ToString(); 
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
